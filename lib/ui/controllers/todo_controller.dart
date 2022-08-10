@@ -29,8 +29,10 @@ class TodoController extends GetxController {
     await getAllUsers();
   }
 
-  void removeItem(item) {
-    _todoList.remove(item);
+  void removeItem(item) async {
+    //_todoList.remove(item);
+    await _tasks.clearOne(item);
+    //await getAllUsers();
   }
 
   void setCompleted(index) {

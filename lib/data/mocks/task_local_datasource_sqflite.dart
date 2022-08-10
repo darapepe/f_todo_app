@@ -55,8 +55,8 @@ class TaskLocalDataSource {
     await db.delete('tasks');
   }
 
-  Future<void> deleteOne(id) async {
-    Database db = await database;
-    await db.delete('tasks', where: 'id = ?', whereArgs: [id]);
+  Future<void> deleteOne(Todo todo) async {
+    final db = await database;
+    await db.delete('tasks', where: 'id = ?', whereArgs: [todo.id]);
   }
 }
