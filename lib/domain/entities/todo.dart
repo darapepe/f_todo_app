@@ -11,7 +11,8 @@ class Todo {
   late int completed;
   late TodoType type;
   Todo(
-      {required this.title,
+      {this.id,
+      required this.title,
       required this.body,
       required this.completed,
       this.type = TodoType.DEFAULT});
